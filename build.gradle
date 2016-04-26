@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+tasks.eclipse.dependsOn(cleanEclipse)
+
+eclipse {
+    project {
+        natures.clear()
+        natures 'org.springsource.ide.eclipse.gradle.core.nature'
+        natures 'org.eclipse.jdt.core.javanature'
+    }
+}
+
